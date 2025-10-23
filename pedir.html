@@ -1,18 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pedir útiles escolares</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="blank-page">
-    <h1>Pedir</h1>
-    <p>Esta página estará disponible pronto.</p>
-    <a class="btn" href="index.html">Volver al inicio</a>
-  </main>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donar útiles escolares</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Contenedor principal del formulario de donación -->
+    <main class="form-page">
+      <h1>Donar útiles escolares</h1>
 
-  <script src="script.js"></script>
-</body>
+      <!-- Mensaje de confirmación (se muestra tras enviar) -->
+      <div id="form-message" class="form-message" hidden>
+        ¡Gracias por tu donación! Pronto nos pondremos en contacto contigo.
+      </div>
+
+      <!-- Toast flotante para confirmación corta -->
+      <div id="toast" class="toast" hidden>peticion enviada</div>
+
+      <!-- Formulario de donación -->
+      <form id="donation-form" novalidate>
+        <!-- Datos de contacto -->
+        <fieldset class="field-group">
+          <legend>Datos de contacto</legend>
+          <label for="fullName">Nombre completo *</label>
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            placeholder="Ej: Ana Pérez"
+            required
+          >
+
+          <label for="contact">Correo electrónico o teléfono *</label>
+          <input
+            id="contact"
+            name="contact"
+            type="text"
+            inputmode="email"
+            placeholder="Ej: ana@mail.com o 555-123-456"
+            required
+          >
+        </fieldset>
+
+        <!-- Lista de útiles con checkboxes -->
+        <fieldset class="field-group">
+          <legend>Útiles a donar</legend>
+          <div class="checkbox-grid">
+            <label class="check">
+              <input type="checkbox" name="items" value="cuadernos">
+              Cuadernos
+            </label>
+            <label class="check">
+              <input type="checkbox" name="items" value="lapices">
+              Lápices
+            </label>
+            <label class="check">
+              <input type="checkbox" name="items" value="colores">
+              Colores
+            </label>
+            <label class="check">
+              <input type="checkbox" name="items" value="mochilas">
+              Mochilas
+            </label>
+            <label class="check">
+              <input type="checkbox" name="items" value="uniformes">
+              Uniformes
+            </label>
+          </div>
+
+          <!-- Cantidad general a donar -->
+          <label for="quantity">Cantidad (unidades totales)</label>
+          <input
+            id="quantity"
+            name="quantity"
+            type="number"
+            min="1"
+            step="1"
+            placeholder="Ej: 5"
+          >
+        </fieldset>
+
+        <!-- Forma de entrega -->
+        <fieldset class="field-group">
+          <legend>Forma de entrega</legend>
+          <label class="radio">
+            <input type="radio" name="delivery" value="punto" checked>
+            Entregar en punto de recolección
+          </label>
+          <label class="radio">
+            <input type="radio" name="delivery" value="domicilio">
+            Recogida a domicilio
+          </label>
+        </fieldset>
+
+        <!-- Ubicación -->
+        <fieldset class="field-group">
+          <legend>Ubicación</legend>
+          <label for="location">Ciudad o barrio</label>
+          <input
+            id="location"
+            name="location"
+            type="text"
+            placeholder="Ej: Centro, Bogotá"
+          >
+        </fieldset>
+
+        <!-- Comentarios adicionales -->
+        <fieldset class="field-group">
+          <legend>Comentarios</legend>
+          <label for="comments">Comentarios adicionales</label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="4"
+            placeholder="Detalles, horarios disponibles, referencias, etc."
+          ></textarea>
+        </fieldset>
+
+        <!-- Acciones del formulario -->
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Enviar</button>
+          <a class="btn secondary" href="index.html">Volver al inicio</a>
+        </div>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
