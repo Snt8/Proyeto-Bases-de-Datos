@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conecta donantes con quienes necesitan útiles escolares">
+  <title>Red de Útiles Escolares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header con animación de entrada -->
+  <header class="site-header animate-fade-in">
+    <div class="header-content">
+      <div class="header-icon">📚</div>
+      <h1>Red de Útiles Escolares</h1>
+      <p>Conecta donantes con quienes más lo necesitan</p>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="home">
+    <section class="cta animate-slide-up">
+      <h2 class="cta-title">¿Cómo quieres participar?</h2>
+      
+      <div class="cta-cards">
+        <!-- Tarjeta Donar -->
+        <button id="btn-donar" class="cta-card" aria-label="Ir a donar útiles escolares">
+          <div class="card-icon">🎁</div>
+          <h3>Donar</h3>
+          <p>Comparte útiles escolares con quien los necesita</p>
+          <span class="card-arrow">→</span>
+        </button>
+
+        <!-- Tarjeta Pedir -->
+        <button id="btn-pedir" class="cta-card" aria-label="Ir a pedir útiles escolares">
+          <div class="card-icon">✋</div>
+          <h3>Pedir</h3>
+          <p>Solicita los útiles que necesitas para estudiar</p>
+          <span class="card-arrow">→</span>
+        </button>
+      </div>
+
+      <!-- Estadísticas -->
+      <div class="stats animate-fade-in">
+        <div class="stat-item">
+          <span class="stat-number" data-count="1250">0</span>
+          <span class="stat-label">Donaciones</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="850">0</span>
+          <span class="stat-label">Familias ayudadas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="45">0</span>
+          <span class="stat-label">Ciudades</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Comunidad Solidaria · Hecho con ❤️</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
